@@ -1,0 +1,40 @@
+.cta {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background: none;
+    border: none;
+    padding: 12px 18px;
+    position: relative;
+    margin-left: 45%;
+    margin-top: 100px;
+    font-size: 50px;
+}
+
+.cta:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(calc(100% + 4px));
+    width: 70px;
+    height: 70px;
+    background: #04eff7;
+    border-radius: 40px;
+    transition: transform .25s .25s cubic-bezier(0, 0, .5, 2), width .25s cubic-bezier(0, 0, .5, 2);
+    z-index: -1;
+}
+
+.cta:hover::before {
+    width: 100%;
+    transform: translateY(-50%) translateX(-18px);
+    transition: transform .25s cubic-bezier(0, 0, .5, 2), width .25s .25s cubic-bezier(0, 0, .5, 2);
+}
+
+.cta i {
+    margin-left: 5px;
+    transition: transform .25s .4s cubic-bezier(0, 0, .5, 2);
+}
+
+.cta:hover i {
+    transform: translateX(3px);
+}

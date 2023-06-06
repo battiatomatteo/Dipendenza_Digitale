@@ -1,0 +1,45 @@
+.button{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    color: #04eff7 !important;
+    padding: 20px 50px;
+    border: 3px solid #04eff7  !important;
+    
+    /* per allineare bottone*/
+    margin: 0;
+    margin-left: 50%;
+    margin-top: 100px;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+        
+    /*transform: translate(190%, 140%);*/
+}
+
+.button::before,
+.button::after{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: inherit;
+    transition: all .5s ease-in;
+}
+
+.button::before{
+    top: -15px;
+    left: -15px;
+    border-width: 3px 0 0 3px;
+}
+
+.button::after{
+    bottom: -15px;
+    right: -15px;
+    border-width: 0 3px 3px 0;
+}
+
+.button:hover::before,
+.button:hover::after{
+    width: calc(100% + 27px);
+    height: calc(100% + 27px);
+}
